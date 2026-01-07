@@ -15,3 +15,9 @@ How to use:
 Contributing:
 
 - Feel free to clean up these examples, add comments, or add corrected versions alongside the originals (use a `*_fixed.py` suffix to keep originals intact).
+
+#### Contents
+
+- [**00_python: Basic Python examples**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/00_python)
+- [**01_python: Python coding conventions and best practices**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/01_python)
+- [**02_python: Organize code files and modules**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/02_python)
