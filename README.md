@@ -21,3 +21,4 @@ Contributing:
 - [**00_python: Basic Python examples**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/00_python)
 - [**01_python: Python coding conventions and best practices**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/01_python)
 - [**02_python: Organize code files and modules**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/02_python)
+- [**03_python: PEP 8 style guide and Zen of Python Code Formatting**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/03_python)
