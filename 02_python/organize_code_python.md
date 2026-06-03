@@ -1,5 +1,5 @@
 # Python Project Structure - Best Practices
-
+```filestructure
 my_project/
 │
 ├── src/
@@ -38,7 +38,7 @@ my_project/
 ├── setup.py
 ├── pyproject.toml
 └── LICENSE
-
+```
 # Key Components:
 
 - src/: Source code (importable package)
