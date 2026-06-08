@@ -62,3 +62,61 @@ print(id(l))  # 3001 (same)
 > Use immutable objects when data should not change.
 
 ![Objects in Python](./object.png)
+
+---
+
+## interger
+
+
+In Python, integers (`int`) are a fundamental data type used to represent whole numbers (positive, negative, or zero) without any decimal point.
+
+### Example: Integer Operations
+
+Let's see how we can work with integers in Python:
+
+```python
+# Declare integer variables
+black_tea_grams = 100
+ginger_grams = 3
+
+# Addition
+total_ingredients = black_tea_grams + ginger_grams
+print(f"Total ingredients: {total_ingredients} grams")  # Output: 103 grams
+
+# Subtraction
+remaining = black_tea_grams - ginger_grams
+print(f"Remaining ingredients: {remaining} grams")      # Output: 97 grams
+
+# Basic arithmetic operations
+number_a = 10
+number_b = 20
+
+sum = number_a + number_b           # Addition: 30
+difference = number_a - number_b    # Subtraction: -10
+product = number_a * number_b       # Multiplication: 200
+quotient = number_a / number_b      # Division: 0.5 (Note: result is float)
+remainder = number_a % number_b     # Modulus: 10 (remainder after division)
+power = number_a ** number_b        # Exponentiation: 10 to the power of 20
+
+# Print results
+print(f"Sum: {sum}")
+print(f"Difference: {difference}")
+print(f"Product: {product}")
+print(f"Quotient: {quotient}")
+print(f"Remainder: {remainder}")
+print(f"Power: {power}")
+```
+
+**Key Points:**
+- Integer objects are **immutable** in Python.
+- All basic arithmetic operations can be performed using operators like `+`, `-`, `*`, `/`, `%`, and `**`.
+- Division (`/`) of two integers returns a float. Use `//` (floor division) if you need an integer result.
+
+```python
+print(10 // 3)  # Output: 3
+```
+
+Integers are widely used in programs for counting, indexing, and whenever whole numbers are needed.
+
+---
+
