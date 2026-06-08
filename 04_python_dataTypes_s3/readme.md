@@ -158,3 +158,69 @@ print(5 == 8)   # Output: False
 - Result of relational operators (`>`, `<`, `==`, `>=`, `<=`, `!=`) is a boolean value.
 
 Booleans are essential for decision-making and flow control in programming.
+
+---
+
+## Floating Point and Decimal Numbers in Python
+
+In Python, numbers with a fractional part are called *floating point numbers* (or simply *floats*), and numbers with precise decimal representation are handled by the `decimal` module.
+
+### Float Example
+
+```python
+milk_quantity = 1.5    # float (liters)
+sugar_quantity = 0.75  # float (kg)
+
+total_ingredients = milk_quantity + sugar_quantity
+print(f"Total (milk + sugar): {total_ingredients}")  # Output: 2.25
+```
+
+Floats can sometimes show small rounding errors because of how they are stored in binary.
+
+```python
+a = 0.1
+b = 0.2
+c = a + b
+print(f"0.1 + 0.2 = {c}")  # Output: 0.30000000000000004
+```
+
+Notice that `0.1 + 0.2` is not exactly `0.3` due to floating-point arithmetic.
+
+### The `decimal` Module
+
+For more precise decimal arithmetic (such as in financial applications), use Python's `decimal.Decimal`:
+
+```python
+from decimal import Decimal
+
+x = Decimal('0.1')
+y = Decimal('0.2')
+z = x + y
+print(f"Using Decimal: 0.1 + 0.2 = {z}")  # Output: 0.3
+```
+
+### More Examples
+
+- Regular division always returns a float:
+    ```python
+    print(7 / 3)   # Output: 2.3333333333333335
+    ```
+- Floor division with floats rounds down to the nearest whole number, result is a float:
+    ```python
+    print(7 // 3)  # Output: 2.0
+    ```
+
+### Checking Types
+
+```python
+print(type(milk_quantity))  # <class 'float'>
+print(type(x))              # <class 'decimal.Decimal'>
+```
+
+### Key Points
+- Use floats (`float`) for general real numbers.
+- Use `decimal.Decimal` for precise decimal representation.
+- Be aware of possible rounding errors with floats.
+- Both support arithmetic operations, but `Decimal` is better for critical accuracy.
+
+Floating point and decimal numbers are foundational in Python for representing any measurement, calculation, or monetary value involving fractions.
