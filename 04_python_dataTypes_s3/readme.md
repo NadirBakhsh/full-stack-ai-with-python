@@ -120,3 +120,41 @@ Integers are widely used in programs for counting, indexing, and whenever whole 
 
 ---
 
+
+Let's see how we can work with boolean values in Python:
+
+```python
+# Declare boolean variables
+is_student = True
+string_count = 5
+
+print(f"Is student: {is_student}")  # Output: True
+
+# Boolean logic in actions
+is_water_boiled = True
+add_tea = True
+
+# Logical AND
+check_service = is_water_boiled and add_tea
+print(f"Check service: {check_service}")  # Output: True
+
+# Logical OR
+can_make_tea = is_water_boiled or add_tea
+print(f"Can make tea: {can_make_tea}")  # Output: True
+
+# Logical NOT
+not_student = not is_student
+print(f"Is not student: {not_student}")  # Output: False
+
+# Relational operators return boolean values
+print(10 > 3)   # Output: True
+print(5 == 8)   # Output: False
+```
+
+**Key Points:**
+- Python uses `True` and `False` as boolean values.
+- Logical operators: `and`, `or`, `not`.
+- Booleans are often used in conditions, comparisons, and control flow.
+- Result of relational operators (`>`, `<`, `==`, `>=`, `<=`, `!=`) is a boolean value.
+
+Booleans are essential for decision-making and flow control in programming.
