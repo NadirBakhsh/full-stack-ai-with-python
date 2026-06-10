@@ -224,3 +224,112 @@ print(type(x))              # <class 'decimal.Decimal'>
 - Both support arithmetic operations, but `Decimal` is better for critical accuracy.
 
 Floating point and decimal numbers are foundational in Python for representing any measurement, calculation, or monetary value involving fractions.
+
+---
+
+## Strings in Python
+
+In Python, a **string** (`str`) is a sequence of characters used to represent text. Strings are **immutable** — once created, they cannot be changed in place. Any operation that seems to modify a string actually creates a **new** string.
+
+### Example: Working with Strings
+
+```python
+user_name = "Nadir Bakhsh"
+
+print(f"User name: {user_name}")  # Output: User name: Nadir Bakhsh
+```
+
+Strings can be written with single quotes (`'...'`) or double quotes (`"..."`). **f-strings** (`f"..."`) let you embed variables directly inside the string.
+
+### Indexing
+
+Each character in a string has a position called an **index**, starting from `0`:
+
+| Index | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
+|-------|---|---|---|---|---|---|---|---|---|---|----|----|
+| Char  | N | a | d | i | r |   | B | a | k | h | s  | h  |
+
+```python
+print(user_name[0])  # N  (first character)
+print(user_name[1])  # a
+print(user_name[2])  # d
+print(user_name[3])  # i
+print(user_name[4])  # r
+```
+
+### Reverse Indexing
+
+Negative indices count from the **end** of the string:
+
+```python
+print(user_name[-1])   # h  (last character)
+print(user_name[-2])   # s
+print(user_name[-11])  # N  (first character)
+```
+
+`-1` is the last character, `-2` is second-to-last, and so on. This is useful when you need the end of a string without knowing its length.
+
+### Slicing
+
+**Slicing** extracts a portion of a string using the syntax `string[start:end]`:
+
+- `start` — index where the slice begins (included)
+- `end` — index where the slice stops (not included)
+
+```python
+sliced_text = user_name[0:5]
+print(sliced_text)  # Output: Nadir
+
+sliced_text = user_name[6:12]
+print(sliced_text)  # Output: Bakhsh
+```
+
+### Skipping Characters (Step)
+
+You can add a third value — **step** — to skip characters: `string[start:end:step]`
+
+```python
+print(user_name[::2])   # Output: Ndir Bakhsh  (every 2nd character)
+print(user_name[1::2])  # Output: dirBakhsh    (every 2nd character from index 1)
+```
+
+| Syntax | Meaning |
+|--------|---------|
+| `[::2]` | Every 2nd character from start to end |
+| `[1::2]` | Every 2nd character starting at index 1 |
+| `[start:end:step]` | Slice with a custom step size |
+
+### Encoding and Decoding
+
+Strings (`str`) hold human-readable text. **Bytes** (`bytes`) hold raw binary data used for files, networks, and storage.
+
+```python
+label_text = "Hello, World!"
+
+encoded_text = label_text.encode('utf-8')
+print(encoded_text)  # Output: b'Hello, World!'
+
+decoded_text = encoded_text.decode('utf-8')
+print(decoded_text)  # Output: Hello, World!
+```
+
+| Method | Direction | Result |
+|--------|-----------|--------|
+| `.encode('utf-8')` | str → bytes | Binary representation |
+| `.decode('utf-8')` | bytes → str | Human-readable text |
+
+**UTF-8** is the most common encoding for text on the web and in modern applications.
+
+### Key Points
+
+- Strings are **immutable** — you cannot change a character in place (e.g. `user_name[0] = 'X'` raises an error).
+- Use **positive indexing** (`0`, `1`, `2`...) to access characters from the start.
+- Use **negative indexing** (`-1`, `-2`...) to access characters from the end.
+- Use **slicing** (`[start:end]` or `[start:end:step]`) to extract substrings.
+- Use **`.encode()`** and **`.decode()`** to convert between strings and bytes.
+
+Strings are one of the most widely used data types in Python — for user input, file handling, web data, and displaying messages.
+
+![Strin in Python](./python-string.png)
+---
+
