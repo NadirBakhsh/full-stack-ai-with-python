@@ -333,3 +333,62 @@ Strings are one of the most widely used data types in Python — for user input,
 ![Strin in Python](./python-string.png)
 ---
 
+### Tuples in Python
+
+A **tuple** is a collection data type in Python that is **ordered** and **immutable** (cannot be changed after creation). Tuples are commonly used to group related pieces of data together.
+
+#### Creating Tuples
+
+You create a tuple by placing values in parentheses, separated by commas:
+
+```python
+masaka_spices = ("cumin", "paprika", "coriander", "salt", "pepper")
+print(masaka_spices)
+```
+
+#### Tuple Unpacking
+
+You can extract (unpack) values from a tuple into individual variables in a single step:
+
+```python
+(spice_1, spice_2, spice_3, spice_4, spice_5) = masaka_spices
+print(spice_1)  # Output: cumin
+print(spice_2)  # Output: paprika
+# ...and so on
+```
+
+This is very convenient when you have fixed-size tuples representing related data.
+
+#### Why Use Tuples?  
+- **Tuples are immutable:** Once created, you can't modify, add, or remove elements.
+- **Faster than lists** for read-only data.
+- **Useful as dictionary keys** or set elements (if all items inside are also immutable).
+
+#### Example: Swapping Variables
+
+You can use tuple unpacking to swap variables quickly:
+
+```python
+a, b = 1, 2
+a, b = b, a
+print(a, b)  # Output: 2 1
+```
+
+#### Membership Check
+
+To check if a value exists in a tuple, use the `in` keyword:
+
+```python
+print("ginger" in masaka_spices)  # Output: False
+print("cumin" in masaka_spices)   # Output: True
+```
+
+#### Key Points
+
+- **Immutable:** You can't change elements after creation (`my_tuple[0] = "new"` raises an error).
+- **Ordered:** Elements retain their order.
+- Supports **indexing and slicing** just like strings and lists.
+- Create single-element tuples with a comma: `single = ("only_one",)`.
+
+![Tuples in Pythons](./tuples.png)
+---
