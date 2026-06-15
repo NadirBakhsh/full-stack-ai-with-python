@@ -392,3 +392,100 @@ print("cumin" in masaka_spices)   # Output: True
 
 ![Tuples in Pythons](./tuples.png)
 ---
+
+### Arrays or Lists in Python
+
+In Python, the most commonly used array-like structure is called a **list**. Lists are *ordered*, *mutable* (changeable), and can contain items of any data type—even a mix of types!
+
+#### Creating a List
+
+A list is defined using square brackets `[]`, with elements separated by commas:
+
+```python
+ingredients = ["milk", "sugar", "tea", "water"]
+print(ingredients)  # Output: ['milk', 'sugar', 'tea', 'water']
+```
+
+#### Accessing List Elements
+
+You can access elements by their **index** (starting at 0):
+
+```python
+print(ingredients[0])  # Output: milk
+print(ingredients[1])  # Output: sugar
+```
+
+#### Modifying Lists
+
+You can change, add, or remove elements:
+
+```python
+# Change an element
+ingredients[0] = "coffee"
+print(ingredients)  # Output: ['coffee', 'sugar', 'tea', 'water']
+
+# Add an element at the end
+ingredients.append("lemon")
+print(ingredients)  # Output: ['coffee', 'sugar', 'tea', 'water', 'lemon']
+
+# Remove an element by value
+ingredients.remove("water")
+print(ingredients)  # Output: ['coffee', 'sugar', 'tea', 'lemon']
+
+# Remove the last element
+ingredients.pop()
+print(ingredients)  # Output: ['coffee', 'sugar', 'tea']
+```
+
+#### Useful List Methods
+
+- `append(x)`: Add `x` to the end.
+- `remove(x)`: Remove first occurrence of `x`.
+- `insert(i, x)`: Insert `x` at index `i`.
+- `extend([x, y])`: Add multiple elements.
+- `pop(i)`: Remove and return item at index `i`.
+- `sort()`: Sort the list.
+- `reverse()`: Reverse the elements.
+- `clear()`: Remove all elements.
+- `copy()`: Return a shallow copy.
+
+#### Slicing and Length
+
+You can get a *subset* (slice) or determine the number of items:
+
+```python
+# Get the first two elements
+print(ingredients[0:2])
+
+# List length
+print(len(ingredients))  # Output: 3
+```
+
+#### Lists vs Tuples
+
+- **Lists**: mutable (you can change/add/remove items), use `[]`
+- **Tuples**: immutable (cannot be changed), use `()`
+
+#### Example
+
+Here's a short demonstration:
+
+```python
+fruits = ["apple", "banana", "cherry"]
+fruits.append("date")
+print(fruits)        # ['apple', 'banana', 'cherry', 'date']
+fruits.pop(1)
+print(fruits)        # ['apple', 'cherry', 'date']
+fruits.sort()
+print(fruits)        # ['apple', 'cherry', 'date']
+```
+
+#### When to Use Lists
+
+- When you need to store a sequence of items that may change.
+- If you need powerful methods for adding/removing/sorting elements.
+
+![List in Python](./list_or_array.png)
+
+
+---
