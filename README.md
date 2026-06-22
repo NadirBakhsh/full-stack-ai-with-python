@@ -27,3 +27,4 @@ Contributing:
 
 #### Practice Python
 [Simple Student Marksheet](@Practice/01_Marksheet.py)
+[List or Arry Practice](@Practice/02_list_or_array.py)
