@@ -485,7 +485,48 @@ print(fruits)        # ['apple', 'cherry', 'date']
 - When you need to store a sequence of items that may change.
 - If you need powerful methods for adding/removing/sorting elements.
 
-![List in Python](./list_or_array.png)
+### Sets and Frozensets in Python
+
+A **set** is an unordered collection of unique items. It is useful when you want to store values without duplicates and perform mathematical set operations such as union, intersection, difference, and symmetric difference.
+
+```python
+odd_numbers = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19}
+prime_numbers = {2, 3, 5, 7, 11, 13, 17, 19}
+
+union_numbers = odd_numbers | prime_numbers
+intersection_numbers = odd_numbers & prime_numbers
+difference_numbers = odd_numbers - prime_numbers
+symmetric_difference_numbers = odd_numbers ^ prime_numbers
+
+print(union_numbers)
+print(intersection_numbers)
+print(difference_numbers)
+print(symmetric_difference_numbers)
+```
+
+#### Common Set Operations
+
+- `|` → union: all unique values from both sets
+- `&` → intersection: common values between both sets
+- `-` → difference: values in the first set but not in the second
+- `^` → symmetric difference: values that appear in only one of the sets
+
+#### Frozenset
+
+A **frozenset** is like a set, but it is **immutable**. Once created, you cannot add or remove items from it.
+
+```python
+frozen_values = frozenset([1, 2, 3, 3, 4])
+print(frozen_values)  # frozenset({1, 2, 3, 4})
+```
+
+#### Key Points
+
+- Sets are **mutable** and **unordered**.
+- Sets do not allow duplicates.
+- Frozensets are **immutable** and can be used when you need a fixed collection.
+
+![Set and Frozenset Example](./09_set_frizenset.py)
 
 
 ---
