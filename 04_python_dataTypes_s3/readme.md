@@ -526,7 +526,106 @@ print(frozen_values)  # frozenset({1, 2, 3, 4})
 - Sets do not allow duplicates.
 - Frozensets are **immutable** and can be used when you need a fixed collection.
 
-![Set and Frozenset Example](./09_set_frizenset.py)
+![Set and Frozenset Example](./set_frizenset.png)
 
+---
+
+## Dictionaries in Python
+
+A **dictionary** (`dict`) is a mutable collection of **key–value pairs**. Each key maps to a value, so you can look up data by name instead of by position (index).
+
+Dictionaries are:
+- **Mutable** — you can add, change, and remove items
+- **Unordered** in older Python versions; in Python 3.7+ they keep insertion order
+- Made of **keys** (must be immutable, e.g. `str`, `int`, `tuple`) and **values** (any type)
+
+### Creating a Dictionary
+
+```python
+# Using dict()
+person = dict(type="human", name="John", age=30)
+print(f"Person: {person}")
+# Output: Person: {'type': 'human', 'name': 'John', 'age': 30}
+
+# Empty dictionary, then add items
+chai_recipe = {}
+chai_recipe['base'] = 'black tea'
+chai_recipe['liquid'] = 'milk'
+print(f"Chai recipe: {chai_recipe}")
+# Output: Chai recipe: {'base': 'black tea', 'liquid': 'milk'}
+```
+
+You can also write a dictionary literal with curly braces:
+
+```python
+chai_recipe = {'base': 'black tea', 'liquid': 'milk'}
+```
+
+### Adding and Updating Values
+
+```python
+chai_recipe['sweetener'] = 'sugar'   # add a new key
+chai_recipe['base'] = 'green tea'    # update an existing key
+```
+
+### Removing Values
+
+```python
+del chai_recipe['liquid']            # remove by key
+print(chai_recipe)                   # {'base': 'black tea'}
+
+# popitem() removes and returns the last inserted (key, value) pair
+last_item = chai_recipe.popitem()
+print(last_item)
+
+# clear() removes all items
+chai_recipe.clear()
+print(chai_recipe)                   # {}
+```
+
+### Checking if a Key Exists
+
+```python
+print('base' in chai_recipe)   # True or False
+```
+
+Use `in` to test **keys**, not values.
+
+### Keys, Values, and Items
+
+```python
+chai_recipe = {'base': 'black tea', 'liquid': 'milk'}
+
+print(chai_recipe.keys())    # dict_keys(['base', 'liquid'])
+print(chai_recipe.values())  # dict_values(['black tea', 'milk'])
+print(chai_recipe.items())   # dict_items([('base', 'black tea'), ('liquid', 'milk')])
+```
+
+| Method | Returns |
+|--------|---------|
+| `.keys()` | All keys |
+| `.values()` | All values |
+| `.items()` | All `(key, value)` pairs |
+
+### Length and Type
+
+```python
+print(len(chai_recipe))      # number of key–value pairs
+print(type(chai_recipe))     # <class 'dict'>
+```
+
+### Key Points
+
+- Dictionaries store data as **key → value** mappings.
+- Keys must be **immutable**; values can be anything.
+- Use `dict[key] = value` to add or update.
+- Use `del dict[key]` or `.popitem()` / `.pop(key)` to remove.
+- Use `'key' in dict` to check membership.
+- Use `.keys()`, `.values()`, `.items()` to inspect contents.
+- Dictionaries are **mutable** (same identity when you change them in place).
+
+Dictionaries are ideal for records, configs, recipes, and any data you look up by a name or ID.
+
+![Dictionary in Python](./dictionary.png)
 
 ---
