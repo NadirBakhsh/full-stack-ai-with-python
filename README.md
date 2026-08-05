@@ -24,9 +24,10 @@ Contributing:
 - [**03_python: PEP 8 style guide and Zen of Python Code Formatting**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/03_python)
 - [**04_python: Data Types in Python**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/04_python_dataTypes_s3)
 
-[**Section 4 Conditionals in python**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/Section_4_Conditionals_in_python)
+- [**Section 4 Conditionals in python**](https://github.com/NadirBakhsh/full-stack-ai-with-python/tree/main/Section_4_Conditionals_in_python)
 
 #### Practice Python
 - [Simple Student Marksheet](@Practice/01_Marksheet.py)
 - [List or Arry Practice](@Practice/02_list_or_array.py)
 - [Thermostat Alert system](@Practice/03_Thermostat_Alert_System.py)
+- [Ternary Operator](./Section_4_Conditionals_in_python/04_delivery_fees_system.py`)
